@@ -122,5 +122,9 @@ def solve(f, df, x_0, x_1, eps=1.0e-5, max_its_n=20, max_its_b=20):
     float
         The approximate root.
     """
-    # Delete these two lines when implementing the method.
-    raise NotImplementedError
+    try:
+        x = newton_raphson(f, df, x_0, eps, max_its_n)
+        return x
+    except ConvergenceError:
+        x = bisection(f, x_0, x_1, eps, max_its_b)
+        return x
