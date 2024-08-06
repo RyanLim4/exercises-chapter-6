@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "setup",
+      "setup": "python3 -m venv venv",
+      "run": "venv/bin/python -m pip install setuptools pytest flake8 pep8-naming flake8-docstrings numpy",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "package-install",
+      "setup": "/venv/bin/python -m pip install -U pip",
+      "run": "/venv/bin/python -m pip install -e .",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "exercise-6-1",
+      "setup": "",
+      "run": "pytest tests/test_exercise_6_1.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "exercise-6-2",
+      "setup": "",
+      "run": "venv/bin/python -m pytest tests/test_exercise_6_2.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "exercise-6-3",
+      "setup": "",
+      "run": "venv/bin/python -m pytest tests/test_exercise_6_3.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "flake8-test",
+      "setup": "",
+      "run": "python3 -m flake8 nonlinear_solvers/",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    }
+  ]
+}
